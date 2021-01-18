@@ -1,3 +1,5 @@
+import "styles/css/citybudgets.css";
+
 import Head from "next/head";
 import { css, Global } from "@emotion/react";
 import Analytics from "analytics";
