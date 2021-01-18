@@ -10,7 +10,7 @@ type ButtonProps = {
   as?: string;
 } & SpaceProps;
 
-const Button = styled<"button", ButtonProps>("button")(
+const Button = styled("button")<ButtonProps>(
   baseButtonStyles,
   variant({ variants: styleVariants }),
   variant({
