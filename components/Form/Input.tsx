@@ -36,7 +36,7 @@ type InputProps = {
   LineHeightProps &
   TypographyProps;
 
-const Input = styled<"input", InputProps>("input")(
+const Input = styled("input")<InputProps>(
   {
     borderRadius: "6px",
     padding: "4px 8px",
