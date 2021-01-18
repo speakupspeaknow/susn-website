@@ -62,8 +62,10 @@ const Box = styled("div")<BoxProps>(
       properties: ["paddingLeft", "paddingRight"],
       transform: (value: ContainerProp | Boolean, scale) => {
         if (value) {
-          const maxWidth = isContainerPropBoolean(value) ? "1280px" : value.maxWidth;
-          const minPadding = isContainerPropBoolean(value) ? "16px" : value.minPadding;
+          const maxWidth =
+            !isContainerPropBoolean(value) && value.maxWidth ? value.maxWidth : "1280px";
+          const minPadding =
+            !isContainerPropBoolean(value) && value.minPadding ? value.minPadding : "15px";
           return `max(calc((100vw - ${maxWidth}) / 2), ${minPadding})`;
         }
       },
