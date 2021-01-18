@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import * as CSS from 'csstype'
+import styled from "@emotion/styled";
+import * as CSS from "csstype";
 import {
   border,
   BorderProps,
@@ -13,31 +13,31 @@ import {
   SpaceProps,
   system,
   TLengthStyledSystem,
-} from 'styled-system'
+} from "styled-system";
 
 type ImageProps = SpaceProps &
   PositionProps &
   BorderProps &
   LayoutProps & {
-    h?: ResponsiveValue<CSS.HeightProperty<TLengthStyledSystem>, RequiredTheme>
-    w?: ResponsiveValue<CSS.WidthProperty<TLengthStyledSystem>, RequiredTheme>
-  }
+    h?: ResponsiveValue<CSS.Property.Height<TLengthStyledSystem>, RequiredTheme>;
+    w?: ResponsiveValue<CSS.Property.Width<TLengthStyledSystem>, RequiredTheme>;
+  };
 
-const Image = styled<'img', ImageProps>('img')(
+const Image = styled("img")<ImageProps>(
   space,
   position,
   border,
   layout,
   system({
     w: {
-      property: 'width',
-      scale: 'sizes',
+      property: "width",
+      scale: "sizes",
     },
     h: {
-      property: 'height',
-      scale: 'sizes',
+      property: "height",
+      scale: "sizes",
     },
   }),
-)
+);
 
-export default Image
+export default Image;

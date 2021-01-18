@@ -31,16 +31,7 @@ type IconProps = SpaceProps &
   GridProps &
   ShadowProps;
 
-const Icon = styled<"i", IconProps>("i")(
-  space,
-  position,
-  color,
-  border,
-  layout,
-  flexbox,
-  grid,
-  shadow,
-);
+const Icon = styled("i")<IconProps>(space, position, color, border, layout, flexbox, grid, shadow);
 
 type AvailableIcon = "instagram" | "twitter";
 

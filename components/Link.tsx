@@ -67,6 +67,7 @@ interface UnifiedLinkProps extends InternalLinkProps, LinkStyleProps {
   ref?: any;
   as?: any;
   onClick?: any;
+  target?: string;
 }
 
 const isExternalLink = (url: string) => {

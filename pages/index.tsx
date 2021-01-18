@@ -157,7 +157,7 @@ const LandingPage = () => {
                   >
                     Preview Email
                   </Button>
-                  <ExternalLink
+                  <Link
                     onClick={() => {
                       track("Send Email", {
                         name: personName,
@@ -166,8 +166,6 @@ const LandingPage = () => {
                         emailCount: emails.length,
                       });
                     }}
-                    asButton
-                    noUnderline
                     target="_blank"
                     buttonStyle="primary"
                     href={makeMailToLink({
@@ -177,7 +175,7 @@ const LandingPage = () => {
                     })}
                   >
                     Send email to {selectedCity.label} officials
-                  </ExternalLink>
+                  </Link>
                 </Box>
               </Box>
               <Box mt={4}>
