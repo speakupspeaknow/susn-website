@@ -24,8 +24,8 @@ interface Props {
   // If omitted, defaults to using onClose
   onClickOutside?: () => void;
   children: React.ReactNode;
-  width?: ResponsiveValue<CSS.MaxWidthProperty<TLengthStyledSystem>, RequiredTheme>;
-  height?: ResponsiveValue<CSS.MaxHeightProperty<TLengthStyledSystem>, RequiredTheme>;
+  width?: ResponsiveValue<CSS.Property.MaxWidth<TLengthStyledSystem>, RequiredTheme>;
+  height?: ResponsiveValue<CSS.Property.MaxHeight<TLengthStyledSystem>, RequiredTheme>;
   confirmClose?: () => boolean;
   actions?: Actions;
   allowCloseWithOutsideClick?: boolean;

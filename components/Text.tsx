@@ -28,7 +28,7 @@ export type TextProps = {
   FontWeightProps &
   SpaceProps;
 
-const Text = styled<"p", TextProps>("p")(
+const Text = styled("p")<TextProps>(
   baseTextStyles,
   variant({
     variants: theme.textStyles,
@@ -48,6 +48,7 @@ Text.defaultProps = {
 const semanticallyStyledText = (as: string, variant?: keyof typeof theme.textStyles | null) => (
   props: React.ComponentProps<typeof Text>,
 ) => (
+  // @ts-ignore
   <Text as={as} variant={variant} {...props}>
     {props.children}
   </Text>
