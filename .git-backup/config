@@ -1,0 +1,19 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "susn-website"]
+	url = https://github.com/heatman7/speakupspeaknow.git
+	fetch = +refs/heads/*:refs/remotes/susn-website/*
+[branch "hanad/wrapup"]
+	remote = susn-website
+	merge = refs/heads/hanad/wrapup
+[remote "susn-website2"]
+	url = https://github.com/speakupspeaknow/susn-website.git
+	fetch = +refs/heads/*:refs/remotes/susn-website2/*
+[remote "origin"]
+	url = https://github.com/speakupspeaknow/susn-website
+	fetch = +refs/heads/*:refs/remotes/origin/*

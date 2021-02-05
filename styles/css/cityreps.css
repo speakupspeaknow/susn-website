@@ -1,0 +1,34 @@
+#grid-container1 {
+  display: grid;
+  grid-template: 50px / 1fr 1fr 1fr;
+
+  justify-items: center;
+}
+
+#grid-container2 {
+  display: grid;
+  grid-template: 50px / 1fr 1fr 1fr;
+  grid-auto-rows: 50px;
+
+  justify-items: center;
+}
+
+#a-a {
+  grid-area: 1 / 1 / 2 / 2;
+
+  align-self: center;
+  border-bottom: 1px solid #dfdfdf;
+}
+#a-b {
+  grid-area: 1 / 2 / 2 / 3;
+
+  align-self: center;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+#a-c {
+  grid-area: 1 / 3 / 2 / 4;
+
+  align-self: center;
+  border-bottom: 1px solid #dfdfdf;
+}
