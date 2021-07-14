@@ -12,8 +12,10 @@
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "analytics": "^0.6.6",
+    "axios": "^0.21.1",
     "copy-to-clipboard": "^3.3.1",
     "css.gg": "^2.0.0",
+    "genius-lyrics-api": "^3.0.6",
     "next": "10.0.5",
     "polished": "^4.0.5",
     "react": "17.0.1",
@@ -21,6 +23,7 @@
     "react-select": "^3.2.0",
     "react-share": "^4.3.1",
     "recharts": "^2.0.3",
+    "spotify-web-api-js": "^1.5.1",
     "styled-system": "^5.1.5",
     "use-analytics": "^0.0.5"
   },
