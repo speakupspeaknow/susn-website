@@ -69,7 +69,7 @@ const GetHashParams1 = () => {
         } else if (lyrics != null && lyrics.includes(word) == false) {
           names.push(song);
         } else {
-          console.log(song.track.name);
+          console.log(`can't find lyrics for ${song.track.name}`);
         }
       });
       throw new Error("Request failed!");

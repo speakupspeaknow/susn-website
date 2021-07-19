@@ -44,7 +44,7 @@ const HomePage = () => {
             align-items: center;
           `}
         >
-          <Text.SectionHeader
+          <Text.Heading
             text-a="s"
             color="white"
             text-align="center"
@@ -52,14 +52,14 @@ const HomePage = () => {
             mb={3}
           >
             Speak Intitative
-          </Text.SectionHeader>
+          </Text.Heading>
           <Box>
             <div>
               <video
                 src="./SUSNhpv.mp4"
                 controls
-                height={isDesktop ? 350 : 240}
-                width={isDesktop ? 700 : 320}
+                height={isDesktop ? 400 : 240}
+                width={isDesktop ? 900 : 320}
               >
                 Video not supported
               </video>
