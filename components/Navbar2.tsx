@@ -1,7 +1,7 @@
 import * as React from "react";
 import { css } from "@emotion/react";
 import { rgba } from "polished";
- 
+// import { useMediaQuery, useQuery } from '@chakra-ui/react'
 import Box from "components/Box";
 import { ExternalLink, InternalLink } from "components/Link";
 import Logo from "components/Logo";
@@ -24,6 +24,8 @@ const buttonStyles = css`
    margin-right: 5px;
  }
 `;
+
+
  
 const navItems = [
  {
@@ -64,17 +66,28 @@ const navItems = [
 // }
  
 ////////////////////////////////
- 
-const bp = "md";
+
+
+const bp = "lg";
  
 const Navbar2 = (props: Props) => {
  // const foo = React.useState(false)
  // const menuOpen = foo[0]
  // const setMenuOpen = foo[1]
- const isDesktop = useBreakpoint(bp);
+//  const isDesktop = useBreakpoint(bp);
  
  const [menuOpen, setMenuOpen] = React.useState(false);
- console.log(menuOpen);
+//  console.log(menuOpen);
+ const [screenWidth, setScreenWidth] = React.useState<number>(0)
+
+React.useEffect(() => {  
+    const updateScreen = () => setScreenWidth(window.innerWidth)
+    updateScreen()
+    window.addEventListener('resize', updateScreen)
+    return () => window.removeEventListener('resize', updateScreen)
+}, [])
+
+const isDesktop = screenWidth > 768
  return (
    <Box
      // bg="black"
